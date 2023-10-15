@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be mine?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .box button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .box button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>will you be mine?</h1>
+        <div class="button">
+            <button id="yes">yes</button>
+            <button id="no">no</button>
+        </div>
+    </div>
+
+    <script>
+        const yesButton = document.getElementById('yes');
+        const noButton = document.getElementById('no');
+        const box = document.querySelector('.box');
+        const audio = document.getElementById('audio');
+
+        yesButton.addEventListener('click', () => {
+            yesButton.addEventListener('click', () => {
+                box.innerHTML = '<h1>SHE SAID YESSSSSS</h1><h2>I mean, she clicked yes</h2><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1fzAuUVbzlhZ1lJAx9PtY6?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
+            });
+        });
+
+        noButton.addEventListener('click', () => {
+            box.style.position = 'absolute';
+            box.style.top = Math.random() * (window.innerHeight - box.clientHeight) + 'px';
+            box.style.left = Math.random() * (window.innerWidth - box.clientWidth) + 'px';
+        });
+    </script>
+</body>
+</html>
